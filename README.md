@@ -158,6 +158,44 @@ Its training graphs are as follows:
 
 ![python](readme_images/test_graphs.png)
 
+### Model 2 Custom CNN model 1
+
+This model is based on testing of the previous approach. Though this model is computationally expensive its able to get good accuracy right from first epoch. This architecture is a combination of Sequential(), Conv2D(), Batch Normalization, Max Pooling, Dropout, and Flatting. Its architecture is as follows.
+
+```
+
+model = Sequential()
+model.add(Conv2D(filters=64, kernel_size=(5, 5), input_shape=input_shape, activation='relu'))
+model.add(BatchNormalization(axis=3))
+model.add(Conv2D(filters=64, kernel_size=(5, 5), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(BatchNormalization(axis=3))
+model.add(Dropout(0.1))
+model.add(Conv2D(filters=128, kernel_size=(5, 5), activation='relu'))
+model.add(BatchNormalization(axis=3))
+model.add(Conv2D(filters=128, kernel_size=(5, 5), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(BatchNormalization(axis=3))
+model.add(Dropout(0.1))
+model.add(Conv2D(filters=256, kernel_size=(5, 5), activation='relu'))
+model.add(BatchNormalization(axis=3))
+model.add(Conv2D(filters=256, kernel_size=(5, 5), activation='relu'))
+model.add(MaxPooling2D((2, 2)))
+model.add(BatchNormalization(axis=3))
+model.add(Dropout(0.1))
+model.add(Flatten())
+model.add(Dense(256, activation='relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.5))
+model.add(Dense(256, activation='relu'))
+model.add(BatchNormalization())
+model.add(Dropout(0.5))
+model.add(Dense(4, activation='softmax'))
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+model.summary()
+```
+Due to its number of parameters it takes more then 2 hours in google collabe to run its first epoch
+![python](readme_images/cnn_arch.png)
 
 ## Road-map
 
