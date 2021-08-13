@@ -2,6 +2,17 @@
 ## Description 
 This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision through its images. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
+## Table of Contents
+
+1. [Installation](#Installation)
+2. [Usage Description](#Usage Description)
+3. [Road-map](#Road-map)
+4. [Acknowledgements](Acknowledgements)
+5. [License](#License)
+6. [Project Status](#Project Status)
+7. [Necessary Things for a README](#necessary-things-for-a-readme)
+
+
 ## Installation
 ### Google Drive Setup 
 
@@ -47,7 +58,7 @@ len(data)
 ```
 
 
-## Preprocessing for training with Data generator
+### Preprocessing for training with Data generator
 
 Without data generator training would have limitation with regards to the amount of ram that can be used. This is where data generator comes in place. It feeds the training model at runtime to unable ram clogging with huge data set and model. This approach is a general way of preprocessing even in the current industry cause most the the industry level projects have dataset in millions that won't be feasible to allocate memory to in single go. As such data generators are used. They can also be used to transform data such that a single data entity can generate multiple data entity with different transformations. Here I haven't used any kind of transformation for the dataset to be used.
 
@@ -204,11 +215,18 @@ Currently the classification is done with straigh forward approach of extracting
 
 Additionally this classification is done considering only 4 mushrooms as its dataset. Out of these 2 are edible and 2 are poisonous to have uniform data. Currently these mushrooms constitute major part of all mushrooms used worldwide. I think model can be further improved with the help wider range of dataset. This will allow greater distinction between poisonous and edible mushrooms.
 
+## Acknowledgements
+I would like to express my gratitude to Lakehead University for providing me with an opportunity to do this research. I would also like to express my thanks to Dr. Trevor Thomas for guiding me through my journy of writing this research paper and help me get better understanding of github and its uses.
 
 ## License
 This is open source project. Though it would be nice to give me message if find this project useful for your needs.
 
+## Support
+Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Email](yash9132h@gmail.com)
+
+
+
 ## Project Status
 Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
 
-Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [email me](yash9132h@gmail.com)
+Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Email](yash9132h@gmail.com)
