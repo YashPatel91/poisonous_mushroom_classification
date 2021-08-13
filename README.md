@@ -195,6 +195,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 model.summary()
 ```
 Due to its number of parameters it takes more then 2 hours in google collabe to run its first epoch
+
 ![python](readme_images/cnn_arch.png)
 
 ## Road-map
