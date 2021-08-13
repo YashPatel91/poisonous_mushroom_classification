@@ -8,9 +8,10 @@ This project is aimed at identifing poisonous mushrooms from edible ones with th
 2. [Usage_Description](#Usage-Description)
 3. [Road-map](#Road-map)
 4. [Acknowledgements](#Acknowledgements)
-5. [License](#License)
-6. [Project Status](#Project-Status)
-7. [Necessary Things for a README](necessary-things-for-a-readme)
+5. [Support](#Support)
+6. [License](#License)
+7. [Project Status](#Project-Status)
+8. [Necessary Things for a README](necessary-things-for-a-readme)
 
 
 ## Installation
