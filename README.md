@@ -5,12 +5,12 @@ This project is aimed at identifing poisonous mushrooms from edible ones with th
 ## Table of Contents
 
 1. [Installation](#Installation)
-2. [Usage Description](#Usage Description)
+2. [Usage_Description](#Usage-Description)
 3. [Road-map](#Road-map)
-4. [Acknowledgements](Acknowledgements)
+4. [Acknowledgements](#Acknowledgements)
 5. [License](#License)
-6. [Project Status](#Project Status)
-7. [Necessary Things for a README](#necessary-things-for-a-readme)
+6. [Project Status](#Project-Status)
+7. [Necessary Things for a README](necessary-things-for-a-readme)
 
 
 ## Installation
@@ -32,7 +32,7 @@ Be sure to change the current working directory
 import os
 os.chdir("/content/gdrive/MyDrive/ML Project/Mushroom Research Paper")
 ```
-## Usage Description
+## Usage-Description
 ### Preprocessing for training without image generator
 
 Without image generator, code and preprocessing gets simpler. You won't need to manage the images,labels and other markers for the training in proper order. A simple loading can be done as follows
@@ -226,7 +226,7 @@ Feel free to contact me in case code has bugs. In fact I will very much apprecia
 
 
 
-## Project Status
+## Project-Status
 Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
 
 Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Email](yash9132h@gmail.com)
