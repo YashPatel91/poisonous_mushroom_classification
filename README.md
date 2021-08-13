@@ -1,8 +1,9 @@
-# poisonous_mushroom_classification
-## Description [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)![social](https://img.shields.io/github/followers/YashPatel91?style=social)![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)
-This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
+# poisonous_mushroom_classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
+## Description 
+This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision through its images. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
-## Google Drive Setup 
+## Installation
+### Google Drive Setup 
 
 All of the the code here is computed on google drive so, it will only work after coping the whole repository to your google drive.
 
@@ -11,29 +12,129 @@ All of the the code here is computed on google drive so, it will only work after
 from google.colab import drive
 drive.mount('./gdrive')
 ```
-Upon running it, it will ask for a authentication token which needs to be generated for the drive that has the repository in it.
+Upon running it, it will ask for a authentication token which needs to be generated for the __drive that has the repository__ in it.
 
-![python](readme_images/auth_token.png)
+![python](readme_images/auth_token.PNG)
 
-- You should list out steps as unambiguously as humanly possible!!
-- Often people don't read the actual install instructions, but they just copy and paste what is in the black boxes. __Keep this in mind!__
-
-## Usage
-
-- Describe how the program / project is going to be used once it is installed. 
-- If it is a command line app, you'll want to give CLI examples:
-
+Be sure to change the current working directory
 ```bash
-cool-project -arg1 -arg2
+import os
+os.chdir("/content/gdrive/MyDrive/ML Project/Mushroom Research Paper")
+```
+## Usage Description
+### Preprocessing for training without image generator
+
+Without image generator, code and preprocessing gets simpler. You won't need to manage the images,labels and other markers for the training in proper order. A simple loading can be done as follows
+```bash
+labels = ["Agaricus Bisporus", "Death Cap", "Galerina Autumnalis", "Oyster"]
+
+for i,label in enumerate(labels):
+  path = os.path.join(os.getcwd(), label)
+  images = os.listdir(path)
+  for img in images:
+    image_loc = os.path.join(path, img)
+    try:
+      ip = cv.imread(image_loc)
+      ip = cv.resize(ip, (300,300))
+      data.append([ip, i])
+    except:
+      print("Image read error at", label, img)
+```
+After this data can be pickled for further use or just shuffled for training
+```bash
+random.shuffle(data)
+len(data)
 ```
 
-- then maybe show a screenshot of  the results :smile:
 
-## Support
+## Preprocessing for training with Data generator
 
-- tell users how they can get a hold of you
+Without data generator training would have limitation with regards to the amount of ram that can be used. This is where data generator comes in place. It feeds the training model at runtime to unable ram clogging with huge data set and model. This approach is a general way of preprocessing even in the current industry cause most the the industry level projects have dataset in millions that won't be feasible to allocate memory to in single go. As such data generators are used. They can also be used to transform data such that a single data entity can generate multiple data entity with different transformations. Here I haven't used any kind of transformation for the dataset to be used.
 
-Contact: [email me](trevor.tomesh@gmail.com)
+```
+def data_generator(samples, batch_size=32,shuffle_data=True,resize=224):
+    """
+    Yields the next training batch.
+    Suppose `samples` is an array [[image1_filename,label1], [image2_filename,label2],...].
+    """
+    num_samples = len(samples)
+    while True: # Loop forever so the generator never terminates
+        samples = shuffle(samples)
+
+        # Get index to start each batch: [0, batch_size, 2*batch_size, ..., max multiple of batch_size <= num_samples]
+        for offset in range(0, num_samples, batch_size):
+            # Get the samples you'll use in this batch
+            batch_samples = samples[offset:offset+batch_size]
+
+            # Initialise X_train and y_train arrays for this batch
+            X_train = []
+            y_train = []
+
+            # For each example
+            for batch_sample in batch_samples:
+                # Load image (X) and label (y)
+                img_name = batch_sample[0]
+                label = batch_sample[1]
+                img =  cv2.imread(os.path.join("",img_name))
+                
+                # apply any kind of preprocessing
+                img,label = preprocessing(img,label)
+                # Add example to arrays
+                X_train.append(img)
+                y_train.append(label)
+
+            # Make sure they're numpy arrays (as opposed to lists)
+            X_train = np.array(X_train)
+            y_train = np.array(y_train)
+
+            # The generator-y part: yield the next training batch            
+            yield X_train, y_train
+```
+
+To get the data in ready formate for our data generator I've made a script for that specific purpose seperatly which is __make_generator_dataset.ipynb__. Here this pre processing data set algorithm is not specific to this classification. 
+
+```
+num_classes = 4
+labels_name={'Agaricus Bisporus':0,'Death Cap':1,'Galerina Autumnalis':2,'Oyster':3}
+num_images_for_test = 200
+train_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
+test_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
+data_dir_list = ["Agaricus Bisporus", "Death Cap", "Galerina Autumnalis", "Oyster"]
+```
+It can easily be altered to suite other classifications. With following parameters to be taken into consideration
+
+```
+num_classes = 4
+```
+Represents the number classes to be classified.
+
+```
+labels_name={'Agaricus Bisporus':0,'Death Cap':1,'Galerina Autumnalis':2,'Oyster':3}
+```
+Represents the dictionionary for labels to classes.
+
+```
+train_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
+test_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
+```
+Represents the formating of the csv file for its use by datagenerator for ease of loading images at runtime
+
+### Model 1 Transfer learning Inception V3
+
+This model is present in __raining_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
+
+```
+mdl1 = Sequential()
+mdl1.add(InceptionV3(input_shape=(300,300,3), include_top=False, weights='imagenet'))
+mdl1.add(Flatten())
+mdl1.add(Dense(64, activation='relu'))
+mdl1.add(Dense(4, activation='sigmoid'))
+mdl1.compile(loss='categorical_crossentropy', metrics=['acc'], optimizer='sgd')
+```
+Its training graphs are as follows:
+
+![python](readme_images/inception_graph.PNG)
+
 
 ## Road-map
 
@@ -48,6 +149,6 @@ Contact: [email me](trevor.tomesh@gmail.com)
 - You can find license info here: [license](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
 
 ## Project Status
+Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
 
-- A lot of the time people will abandon projects. You should always at least let people know if you aren't interested in working on a project anymore!
-- Someone might want to pick it up on your behalf!
+Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [email me](yash9132h@gmail.com)
