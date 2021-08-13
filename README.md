@@ -156,7 +156,7 @@ model.add(Activation('softmax'))
 ```
 Its training graphs are as follows:
 
-![python](readme_images/test_graphs.PNG)
+![python](readme_images/test_graphs.png)
 
 
 ## Road-map
