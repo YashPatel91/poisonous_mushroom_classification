@@ -2,8 +2,8 @@
 ## Description 
 This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision through its images. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
-
-## Google Drive Setup 
+## Installation
+### Google Drive Setup 
 
 All of the the code here is computed on google drive so, it will only work after coping the whole repository to your google drive.
 
@@ -21,8 +21,8 @@ Be sure to change the current working directory
 import os
 os.chdir("/content/gdrive/MyDrive/ML Project/Mushroom Research Paper")
 ```
-
-### Without image generator
+## Usage Description
+### Preprocessing for training without image generator
 
 Without image generator, code and preprocessing gets simpler. You won't need to manage the images,labels and other markers for the training in proper order. A simple loading can be done as follows
 ```bash
@@ -45,7 +45,9 @@ After this data can be pickled for further use or just shuffled for training
 random.shuffle(data)
 len(data)
 ```
-## With Data generator
+
+
+## Preprocessing for training with Data generator
 
 Without data generator training would have limitation with regards to the amount of ram that can be used. This is where data generator comes in place. It feeds the training model at runtime to unable ram clogging with huge data set and model. This approach is a general way of preprocessing even in the current industry cause most the the industry level projects have dataset in millions that won't be feasible to allocate memory to in single go. As such data generators are used. They can also be used to transform data such that a single data entity can generate multiple data entity with different transformations. Here I haven't used any kind of transformation for the dataset to be used.
 
