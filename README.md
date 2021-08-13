@@ -1,35 +1,19 @@
 # poisonous_mushroom_classification
-## Description
+## Description [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)![social](https://img.shields.io/github/followers/YashPatel91?style=social)![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)
 This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
-## Badges
+## Google Drive Setup 
 
-![social](https://img.shields.io/github/followers/trevortomesh?style=social)![twitter](https://img.shields.io/twitter/follow/trevortomesh?style=social)![languages](https://img.shields.io/github/languages/count/trevortomesh/research-methods-class)
+All of the the code here is computed on google drive so, it will only work after coping the whole repository to your google drive.
 
-- Badges are small images that convey meta data such as whether or not all the tests are passing, version numbers, languages used, etc. 
-- Get badges at shields.io
-
-## Visuals
-
-- Visuals are very important! You might want to include screenshots of your code in operation. GIFS are also great!
-- Just use the "![ ]()" to input images.
-
-## Installation 
-
-- Describe how your software / development is installed. Sometimes it's easy as something like:
-
+### Google Drive Loading
 ```bash
-sudo apt-get install my-cool-thing
+from google.colab import drive
+drive.mount('./gdrive')
 ```
+Upon running it, it will ask for a authentication token which needs to be generated for the drive that has the repository in it.
 
-- often it involves a bit of  downloading sources and building:
-
-```bash
-git clone my-cool-repo.git
-cd /my-cool-repo
-cd /build
-make
-```
+![python](readme_images/auth_token.png)
 
 - You should list out steps as unambiguously as humanly possible!!
 - Often people don't read the actual install instructions, but they just copy and paste what is in the black boxes. __Keep this in mind!__
