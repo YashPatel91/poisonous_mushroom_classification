@@ -135,6 +135,29 @@ Its training graphs are as follows:
 
 ![python](readme_images/inception_graph.PNG)
 
+### Model 2 Custom CNN model 1
+
+This is a convolutional neural model which doesn't have transfered learning weights as the previous approach. This approach was designed to better understand in which direction to make the further changes to convolutional neural network such that it can do better at classifing mushrooms. This approach seems to be inferior to the transfer learning approach but it be used to learn to make a better model.Below is its architecture.
+
+```
+model.add(Conv2D(32, (3,3),padding='same',input_shape=input_shape,name='conv2d_1'))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2),name='maxpool2d_1'))
+model.add(Conv2D(32, (3, 3),name='conv2d_2'))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2),name='maxpool2d_2'))
+model.add(Dropout(0.5))
+model.add(Flatten())
+model.add(Dense(64))
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+model.add(Dense(4))
+model.add(Activation('softmax'))
+```
+Its training graphs are as follows:
+
+![python](readme_images/test_graphs.PNG)
+
 
 ## Road-map
 
