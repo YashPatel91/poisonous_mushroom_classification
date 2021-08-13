@@ -1,4 +1,4 @@
-# poisonous_mushroom_classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
+# Poisonous Mushroom Classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
 ## Description 
 This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision through its images. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
@@ -200,15 +200,13 @@ Due to its number of parameters it takes more then 2 hours in google collabe to 
 
 ## Road-map
 
-- List your panned future developments
-- This is a good way to keep track of what it is that you want to do in the future!
+Currently the classification is done with straigh forward approach of extracting features and comparing them with the trained weights. Here images are directly used by the model to predict their class without any other form of manipulation of the data before and after the model. So I propose use of object identifier like Yolo or denseNet to first identify a mushroom from the picture and make a bounding box around it. After this, the image in the bounding box will be used to train or predict in the model. This approach I belive would be better suited for the needs of this project
+
+Additionally this classification is done considering only 4 mushrooms as its dataset. Out of these 2 are edible and 2 are poisonous to have uniform data. Currently these mushrooms constitute major part of all mushrooms used worldwide. I think model can be further improved with the help wider range of dataset. This will allow greater distinction between poisonous and edible mushrooms.
 
 
 ## License
-
-- Depending on what kind of project you are doing, you might have a specific copyright. 
-- Usually on github, everything is open source!
-- You can find license info here: [license](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/licensing-a-repository)
+This is open source project. Though it would be nice to give me message if find this project useful for your needs.
 
 ## Project Status
 Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
