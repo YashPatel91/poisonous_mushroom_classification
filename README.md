@@ -119,6 +119,21 @@ test_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
 ```
 Represents the formating of the csv file for its use by datagenerator for ease of loading images at runtime
 
+### Model 1 Transfer learning Inception V3
+
+This model is present in __raining_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
+
+```
+mdl1 = Sequential()
+mdl1.add(InceptionV3(input_shape=(300,300,3), include_top=False, weights='imagenet'))
+mdl1.add(Flatten())
+mdl1.add(Dense(64, activation='relu'))
+mdl1.add(Dense(4, activation='sigmoid'))
+mdl1.compile(loss='categorical_crossentropy', metrics=['acc'], optimizer='sgd')
+```
+Its training graphs are as follows:
+
+![python](readme_images/inception_graph.PNG)
 
 
 ## Road-map
