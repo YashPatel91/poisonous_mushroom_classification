@@ -1,4 +1,4 @@
-# Poisonous Mushroom Classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
+# Poisonous Mushroom Classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/) https://img.shields.io/badge/Last%20Updated-18th%20Aug-green
 ## Description 
 This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision through its images. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
