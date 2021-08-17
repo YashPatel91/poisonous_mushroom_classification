@@ -134,7 +134,7 @@ Represents the formating of the csv file for its use by datagenerator for ease o
 
 ### Model-1-Transfer-learning-Inception-V3
 
-This model is present in __raining_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
+This model is present in __training_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
 
 ```
 mdl1 = Sequential()
@@ -225,19 +225,19 @@ Currently the classification is done with straigh forward approach of extracting
 Additionally this classification is done considering only 4 mushrooms as its dataset. Out of these 2 are edible and 2 are poisonous to have uniform data. Currently these mushrooms constitute major part of all mushrooms used worldwide. I think model can be further improved with the help wider range of dataset. This will allow greater distinction between poisonous and edible mushrooms.
 
 ## Acknowledgements
-I would like to express my gratitude to Lakehead University for providing me with an opportunity to do this research. I would also like to express my thanks to Dr. Trevor Thomas for guiding me through my journy of writing this research paper and help me get better understanding of github and its uses.
+I would like to express my gratitude to Lakehead University for providing me with an opportunity to do this research. I would also like to express my thanks to Dr. Trevor Tomesh for guiding me through my journy of writing this research paper and help me get better understanding of github and its uses.
 
 ## License
 This is open source project. Though it would be nice to give me message if find this project useful for your needs.
 
 ## Support
-Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Contact-Email](yash9132h@gmail.com)
+Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply.
 
 
 
 ## Project-Status
-Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
+Project is still under development but on hold for indefinate amount. Would be great if anyone wants to collaborate for this. Just drop a message
 
 Connect: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) 
 
-Contact: [Contact-Email](yash9132h@gmail.com)
+Contact: yash9132@gmail.com
