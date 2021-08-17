@@ -225,7 +225,7 @@ Currently the classification is done with straigh forward approach of extracting
 Additionally this classification is done considering only 4 mushrooms as its dataset. Out of these 2 are edible and 2 are poisonous to have uniform data. Currently these mushrooms constitute major part of all mushrooms used worldwide. I think model can be further improved with the help wider range of dataset. This will allow greater distinction between poisonous and edible mushrooms.
 
 ## Acknowledgements
-I would like to express my gratitude to Lakehead University for providing me with an opportunity to do this research. I would also like to express my thanks to Dr. Trevor Thomas for guiding me through my journy of writing this research paper and help me get better understanding of github and its uses.
+I would like to express my gratitude to Lakehead University for providing me with an opportunity to do this research. I would also like to express my thanks to Dr. Trevor Tomesh for guiding me through my journy of writing this research paper and help me get better understanding of github and its uses.
 
 ## License
 This is open source project. Though it would be nice to give me message if find this project useful for your needs.
