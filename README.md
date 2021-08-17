@@ -6,12 +6,13 @@ This project is aimed at identifing poisonous mushrooms from edible ones with th
 
 1. [Installation](#Installation)
 2. [Usage_Description](#Usage-Description)
-3. [Road-map](#Road-map)
-4. [Acknowledgements](#Acknowledgements)
-5. [Support](#Support)
-6. [License](#License)
-7. [Project Status](#Project-Status)
-8. [Necessary Things for a README](necessary-things-for-a-readme)
+3. [Comparision/Results](Comparisions/Results)
+4. [Road-map](#Road-map)
+5. [Acknowledgements](#Acknowledgements)
+6. [Support](#Support)
+7. [License](#License)
+8. [Project Status](#Project-Status)
+
 
 
 ## Installation
@@ -230,11 +231,11 @@ I would like to express my gratitude to Lakehead University for providing me wit
 This is open source project. Though it would be nice to give me message if find this project useful for your needs.
 
 ## Support
-Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Email](yash9132h@gmail.com)
+Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Contact-Email](yash9132h@gmail.com)
 
 
 
 ## Project-Status
 Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
 
-Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Email](yash9132h@gmail.com)
+Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Contact-Email](yash9132h@gmail.com)
