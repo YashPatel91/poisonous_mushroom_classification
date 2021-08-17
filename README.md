@@ -131,7 +131,7 @@ test_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
 ```
 Represents the formating of the csv file for its use by datagenerator for ease of loading images at runtime
 
-### Model 1 Transfer learning Inception V3
+### Model-1-Transfer-learning-Inception-V3
 
 This model is present in __raining_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
 
@@ -209,6 +209,11 @@ model.summary()
 Due to its number of parameters it takes more then 2 hours in google collabe to run its first epoch
 
 ![python](readme_images/cnn_arch.PNG)
+
+## Comparisions/Results
+
+As it stands now, model 1 [model 1](### Model-1-Transfer-learning-Inception-V3) has accuracy of around 82% accuracy over the test data set while the custom model 2 has accuracy of around 70% at the end of its run. Model 3 is highly process expensive, a single epoch has processing time of around 150 minutes. Model 3 has achived accuracy over 78% over 5 epochs.
+
 
 ## Road-map
 
