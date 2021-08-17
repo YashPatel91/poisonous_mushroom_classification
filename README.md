@@ -212,7 +212,7 @@ Due to its number of parameters it takes more then 2 hours in google collabe to 
 
 ## Comparisions/Results
 
-As it stands now, model 1 [Model-1:Transfer-learning-Inception-V3](#Model-1-Transfer-learning-Inception-V3) has accuracy of around 82% accuracy over the test data set while the custom model 2 has accuracy of around 70% at the end of its run. Model 3 is highly process expensive, a single epoch has processing time of around 150 minutes. Model 3 has achived accuracy over 78% over 5 epochs.
+As it stands now, [Model-1](#Model-1-Transfer-learning-Inception-V3) has accuracy of around 82% accuracy over the test data set while the custom [Model-2](# Model 2 Custom CNN model 1) has accuracy of around 70% at the end of its run. Model 3 is highly process expensive, a single epoch has processing time of around 150 minutes. Model 3 has achived accuracy over 78% over 5 epochs.
 
 
 ## Road-map
