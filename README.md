@@ -1,4 +1,4 @@
-# Poisonous Mushroom Classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/)
+# Poisonous Mushroom Classification [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-360/) ![Python 3.7](https://img.shields.io/badge/Last%20Updated-18th%20Aug-green) ![Python 3.7](https://img.shields.io/badge/Progres-On%20Hold-yellow) ![Python 3.7](https://img.shields.io/github/contributors/yashpatel91/poisonous_mushroom_classification)
 ## Description 
 This project is aimed at identifing poisonous mushrooms from edible ones with the help of computer vision through its images. This is done with the help of python,keras,tensorflow and many other libraries. Approaches present in this project to tackle the given problem include use of transfer learning and custom convolutional neural networks. This project has step by step information on the approaches as well is structure in such a way that other classification problems can also be done with similar approach without any major changes. All work done in this project is with the help of standard version of google collab.
 
@@ -6,12 +6,13 @@ This project is aimed at identifing poisonous mushrooms from edible ones with th
 
 1. [Installation](#Installation)
 2. [Usage_Description](#Usage-Description)
-3. [Road-map](#Road-map)
-4. [Acknowledgements](#Acknowledgements)
-5. [Support](#Support)
-6. [License](#License)
-7. [Project Status](#Project-Status)
-8. [Necessary Things for a README](necessary-things-for-a-readme)
+3. [Comparision/Results](Comparisions/Results)
+4. [Road-map](#Road-map)
+5. [Acknowledgements](#Acknowledgements)
+6. [Support](#Support)
+7. [License](#License)
+8. [Project Status](#Project-Status)
+
 
 
 ## Installation
@@ -131,7 +132,7 @@ test_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
 ```
 Represents the formating of the csv file for its use by datagenerator for ease of loading images at runtime
 
-### Model 1 Transfer learning Inception V3
+### Model-1-Transfer-learning-Inception-V3
 
 This model is present in __raining_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
 
@@ -147,7 +148,7 @@ Its training graphs are as follows:
 
 ![python](readme_images/inception_graph.PNG)
 
-### Model 2 Custom CNN model 1
+### Model-2-Custom-CNN-model_1
 
 This is a convolutional neural model which doesn't have transfered learning weights as the previous approach. This approach was designed to better understand in which direction to make the further changes to convolutional neural network such that it can do better at classifing mushrooms. This approach seems to be inferior to the transfer learning approach but it be used to learn to make a better model.Below is its architecture.
 
@@ -170,7 +171,7 @@ Its training graphs are as follows:
 
 ![python](readme_images/test_graphs.png)
 
-### Model 2 Custom CNN model 1
+### Model-3-Custom-CNN-model_2
 
 This model is based on testing of the previous approach. Though this model is computationally expensive its able to get good accuracy right from first epoch. This architecture is a combination of Sequential(), Conv2D(), Batch Normalization, Max Pooling, Dropout, and Flatting. Its architecture is as follows.
 
@@ -210,6 +211,13 @@ Due to its number of parameters it takes more then 2 hours in google collabe to 
 
 ![python](readme_images/cnn_arch.PNG)
 
+## Comparisions/Results
+
+As it stands now, [Model-1](#Model-1-Transfer-learning-Inception-V3) has accuracy of around 82% accuracy over the test data set while the custom [Model-2](#Model-2-Custom-CNN-model_1) has accuracy of around 70% at the end of its run. [Model-3](#Model-3-Custom-CNN-model_2) is highly process expensive, a single epoch has processing time of around 150 minutes. [Model-3](#Model-3-Custom-CNN-model_2) has achived accuracy over 85% over 7 epochs.
+
+Computationally [Model-1](#Model-1-Transfer-learning-Inception-V3) has the highest efficiency for the identification to processing time ratio while [Model-3](#Model-3-Custom-CNN-model_2) has the highest accuracy but at the cost very processing needs.
+
+
 ## Road-map
 
 Currently the classification is done with straigh forward approach of extracting features and comparing them with the trained weights. Here images are directly used by the model to predict their class without any other form of manipulation of the data before and after the model. So I propose use of object identifier like Yolo or denseNet to first identify a mushroom from the picture and make a bounding box around it. After this, the image in the bounding box will be used to train or predict in the model. This approach I belive would be better suited for the needs of this project
@@ -223,11 +231,13 @@ I would like to express my gratitude to Lakehead University for providing me wit
 This is open source project. Though it would be nice to give me message if find this project useful for your needs.
 
 ## Support
-Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Email](yash9132h@gmail.com)
+Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Contact-Email](yash9132h@gmail.com)
 
 
 
 ## Project-Status
 Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
 
-Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Email](yash9132h@gmail.com)
+Connect: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) 
+
+Contact: [Contact-Email](yash9132h@gmail.com)
