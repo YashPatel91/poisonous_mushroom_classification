@@ -131,7 +131,7 @@ test_df = pd.DataFrame(columns=['FileName', 'Label', 'ClassName'])
 ```
 Represents the formating of the csv file for its use by datagenerator for ease of loading images at runtime
 
-### Model-1-Transfer-learning-Inception-V3
+### Model-1:Transfer-learning-Inception-V3
 
 This model is present in __raining_without_data_generator_transfered_learning.ipynb__. This model employs transfer learning by employing Inception V3 in its architecture to do its prediction. As this model is not too complex and has lower number of parameters, it doesn't require data generator to train on the data-set. It directly trains over whole data-set in a single go. Below is the model architecture.
 
@@ -147,7 +147,7 @@ Its training graphs are as follows:
 
 ![python](readme_images/inception_graph.PNG)
 
-### Model 2 Custom CNN model 1
+### Model-2:Custom-CNN-model_1
 
 This is a convolutional neural model which doesn't have transfered learning weights as the previous approach. This approach was designed to better understand in which direction to make the further changes to convolutional neural network such that it can do better at classifing mushrooms. This approach seems to be inferior to the transfer learning approach but it be used to learn to make a better model.Below is its architecture.
 
@@ -212,7 +212,7 @@ Due to its number of parameters it takes more then 2 hours in google collabe to 
 
 ## Comparisions/Results
 
-As it stands now, [Model-1](#Model-1-Transfer-learning-Inception-V3) has accuracy of around 82% accuracy over the test data set while the custom [Model-2](# Model 2 Custom CNN model 1) has accuracy of around 70% at the end of its run. Model 3 is highly process expensive, a single epoch has processing time of around 150 minutes. Model 3 has achived accuracy over 78% over 5 epochs.
+As it stands now, [Model-1](#Model-1:Transfer-learning-Inception-V3) has accuracy of around 82% accuracy over the test data set while the custom [Model-2](# Model-2:Custom-CNN-model_1) has accuracy of around 70% at the end of its run. Model 3 is highly process expensive, a single epoch has processing time of around 150 minutes. Model 3 has achived accuracy over 78% over 5 epochs.
 
 
 ## Road-map
