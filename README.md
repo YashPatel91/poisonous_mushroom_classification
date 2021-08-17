@@ -231,7 +231,7 @@ I would like to express my gratitude to Lakehead University for providing me wit
 This is open source project. Though it would be nice to give me message if find this project useful for your needs.
 
 ## Support
-Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply. [Contact-Email](yash9132h@gmail.com)
+Feel free to contact me in case code has bugs. In fact I will very much appreciate for finding the faults in the code. Feel free to reach out to me. Though emails are the fastest ones I reply.
 
 
 
@@ -240,4 +240,4 @@ Project is still under development but on hold for indefinate amount. Would be g
 
 Connect: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) 
 
-Contact: [Contact-Email](yash9132h@gmail.com) (yash9132@gmail.com)
+Contact: yash9132@gmail.com
