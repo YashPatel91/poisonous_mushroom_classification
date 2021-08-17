@@ -238,4 +238,5 @@ Feel free to contact me in case code has bugs. In fact I will very much apprecia
 ## Project-Status
 Project is still under development. Would be great if anyone wants to collaborate for this. Just drop a message
 
-Contact: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Contact-Email](yash9132h@gmail.com)
+Connect: Yash Atul Patel ![twitter](https://img.shields.io/twitter/follow/yashpatel?style=social)
+Contact:![social](https://img.shields.io/github/followers/YashPatel91?style=social) [Contact-Email](yash9132h@gmail.com)
